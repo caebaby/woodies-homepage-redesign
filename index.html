@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A conversion-focused homepage redesign concept for Woodie's Auto Service &amp; Repair Centers.">
+  <title>Woodie's Auto Service | Trusted Auto Repair Across the Carolinas</title>
+  <link rel="preload" href="assets/logo.svg" as="image" type="image/svg+xml">
+  <link rel="preload" href="assets/engine.webp" as="image" type="image/webp">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <div class="proof-bar" aria-label="Woodie's customer rating">
+    <div class="shell proof-bar__inner">
+      <a href="https://www.woodiesautoservice.com/reviews">
+        <span class="stars" aria-hidden="true">★★★★★</span>
+        <strong>4.54 / 5</strong> from 8,836 customer reviews
+      </a>
+      <span>Family-owned since 1963</span>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="https://www.woodiesautoservice.com/" aria-label="Woodie's Auto Service home">
+        <img src="assets/logo.svg" alt="Woodie's Auto Service &amp; Repair Centers" width="290" height="126">
+      </a>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+        <span></span><span></span><span></span>
+        <span class="sr-only">Toggle navigation</span>
+      </button>
+
+      <nav id="primary-nav" class="primary-nav" aria-label="Primary navigation">
+        <a href="#services">Services</a>
+        <a href="#location">Locations</a>
+        <a href="https://www.woodiesautoservice.com/coupons">Specials</a>
+        <a href="#why-woodies">Why Woodie's</a>
+      </nav>
+
+      <div class="header-actions">
+        <a class="text-link" href="tel:+17048377487">Call a shop</a>
+        <a class="button button--small" href="https://www.woodiesautoservice.com/appointments">Schedule service</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="shell hero-grid">
+        <div class="hero-copy reveal">
+          <h1>Auto repair you can feel good about.</h1>
+          <p class="hero-lede">Since 1963, Woodie's has served Carolina drivers with ASE-certified expertise, straightforward communication, and a nationwide warranty.</p>
+
+          <div class="hero-actions" aria-label="Service actions">
+            <a class="button" href="https://www.woodiesautoservice.com/appointments">Schedule service</a>
+            <a class="button button--outline" href="#location">Find my nearest shop</a>
+          </div>
+
+          <ul class="hero-proof" aria-label="Reasons to trust Woodie's">
+            <li><strong>ASE-certified</strong> technicians</li>
+            <li><strong>36 months / 36,000 miles</strong> nationwide warranty</li>
+            <li><strong>Same-day service</strong> at participating shops</li>
+          </ul>
+        </div>
+
+        <div class="hero-visual reveal" aria-label="Woodie's technician inspecting an engine">
+          <img src="assets/engine.webp" alt="Technician inspecting a vehicle engine" width="373" height="229">
+          <div class="hero-visual__note">
+            <span>What happens next</span>
+            <strong>Pick a shop. Tell us what is going on. We will take it from there.</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="location" class="location-section" aria-labelledby="location-title">
+      <div class="shell location-grid">
+        <div class="location-intro">
+          <h2 id="location-title">A real location, a real phone number, a clear next step.</h2>
+          <p>Choose an area to see one nearby Woodie's location. You can call the shop directly or continue to online scheduling.</p>
+        </div>
+
+        <div class="location-finder">
+          <label for="area-select">Your area</label>
+          <div class="select-row">
+            <select id="area-select">
+              <option value="charlotte">Charlotte</option>
+              <option value="charleston">Charleston</option>
+              <option value="rock-hill">Rock Hill</option>
+            </select>
+            <a class="all-locations" href="https://www.woodiesautoservice.com/locations">View all locations</a>
+          </div>
+
+          <article class="shop-result" aria-live="polite">
+            <div>
+              <p class="shop-result__label">Nearby Woodie's</p>
+              <h3 id="shop-name">Midtown</h3>
+              <p id="shop-address">915 South McDowell St., Charlotte, NC 28204</p>
+              <p id="shop-hours">Monday–Friday, 7:00 AM–6:00 PM</p>
+            </div>
+            <div class="shop-result__actions">
+              <a id="shop-call" class="button button--cream" href="tel:+17048377487">Call (704) 837-7487</a>
+              <a id="shop-directions" class="location-link" href="https://www.woodiesautoservice.com/locations/charlotte-nc/midtown">Shop details and directions</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="services-section" aria-labelledby="services-title">
+      <div class="shell">
+        <div class="section-heading">
+          <div>
+            <h2 id="services-title">Choose the problem, not a maze of services.</h2>
+          </div>
+          <a class="arrow-link" href="https://www.woodiesautoservice.com/services">View every service <span aria-hidden="true">→</span></a>
+        </div>
+
+        <div class="service-layout">
+          <a class="service-feature" href="https://www.woodiesautoservice.com/services/engine-diagnostics">
+            <img src="assets/engine.webp" alt="Technician diagnosing a vehicle engine" width="373" height="229">
+            <div>
+              <span>Something feels wrong</span>
+              <h3>Diagnose a problem</h3>
+              <p>Warning light, unusual noise, rough ride, or a problem you cannot name yet.</p>
+            </div>
+          </a>
+
+          <div class="service-stack">
+            <a class="service-row" href="https://www.woodiesautoservice.com/services/oil-change">
+              <img src="assets/oil.webp" alt="Fresh motor oil being poured during service" width="373" height="229" loading="lazy">
+              <div>
+                <span>Keep it running well</span>
+                <h3>Routine maintenance</h3>
+              </div>
+            </a>
+            <a class="service-row" href="https://www.woodiesautoservice.com/services/brakes">
+              <img src="assets/brakes.webp" alt="Vehicle brake assembly ready for repair" width="373" height="229" loading="lazy">
+              <div>
+                <span>Stop with confidence</span>
+                <h3>Brake service</h3>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="why-woodies" class="trust-section" aria-labelledby="trust-title">
+      <div class="shell trust-grid">
+        <div class="warranty-mark reveal">
+          <img src="assets/warranty.png" alt="NAPA 36 months or 36,000 miles nationwide warranty" width="210" height="210" loading="lazy">
+        </div>
+        <div class="trust-copy reveal">
+          <h2 id="trust-title">The repair is local. The warranty travels with you.</h2>
+          <p>Qualifying repairs are covered for 36 months or 36,000 miles and honored at more than 19,000 locations nationwide.</p>
+          <a class="button button--cream" href="https://www.woodiesautoservice.com/contactus">See what the warranty covers</a>
+        </div>
+        <blockquote class="review-quote reveal">
+          <p>“Quick and efficient service. Ms Bartlett was very professional and helped take care of us in the same morning.”</p>
+          <footer>
+            <strong>Hilda Orama</strong>
+            <span>Woodie's Indian Land</span>
+          </footer>
+        </blockquote>
+      </div>
+    </section>
+
+    <section class="heritage-section" aria-labelledby="heritage-title">
+      <div class="shell heritage-grid">
+        <figure class="heritage-image reveal">
+          <img src="assets/family.webp" alt="The Woodie's family gathered together at home" width="760" height="709" loading="lazy">
+          <figcaption>Family-owned since 1963</figcaption>
+        </figure>
+        <div class="heritage-copy reveal">
+          <h2 id="heritage-title">A neighborhood shop at Carolina scale.</h2>
+          <p>Woodie's began as a family business in 1963. The footprint has grown, but the promise is still personal: knowledgeable people, fair service, and a shop that stands behind its work.</p>
+          <ul class="plain-list">
+            <li>Complimentary digital vehicle inspection</li>
+            <li>Shuttle service at each location</li>
+            <li>Comfortable waiting rooms with Wi-Fi and snacks</li>
+          </ul>
+          <a class="arrow-link" href="https://www.woodiesautoservice.com/about-us">Meet Woodie's <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-cta" aria-labelledby="final-cta-title">
+      <div class="shell final-cta__inner">
+        <div>
+          <h2 id="final-cta-title">Tell us what your car needs. We will help with the rest.</h2>
+          <p><strong>4.54 / 5</strong> from 8,836 customer reviews. Backed by ASE-certified technicians and a nationwide warranty.</p>
+        </div>
+        <div class="final-cta__actions">
+          <a class="button button--cream" href="https://www.woodiesautoservice.com/appointments">Schedule service</a>
+          <a class="button button--outline-light" href="#location">Find my nearest shop</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <img src="assets/logo.svg" alt="Woodie's Auto Service &amp; Repair Centers" width="220" height="96" loading="lazy">
+      <p>A conversion-focused homepage redesign concept using Woodie's supplied brand assets and published proof points.</p>
+      <div>
+        <a href="https://www.woodiesautoservice.com/appointments">Appointments</a>
+        <a href="https://www.woodiesautoservice.com/locations">Locations</a>
+        <a href="https://www.woodiesautoservice.com/reviews">Reviews</a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="mobile-action-bar" aria-label="Quick actions">
+    <a href="tel:+17048377487">Call a shop</a>
+    <a href="https://www.woodiesautoservice.com/appointments">Schedule service</a>
+  </div>
+</body>
+</html>
