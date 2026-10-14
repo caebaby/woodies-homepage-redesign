@@ -6,7 +6,7 @@
   <meta name="description" content="A conversion-focused homepage redesign concept for Woodie's Auto Service &amp; Repair Centers.">
   <title>Woodie's Auto Service | Trusted Auto Repair Across the Carolinas</title>
   <link rel="preload" href="assets/logo.svg" as="image" type="image/svg+xml">
-  <link rel="preload" href="assets/engine.webp" as="image" type="image/webp">
+  <link rel="preload" href="assets/hero-customer-mechanic.webp" as="image" type="image/webp">
   <link rel="stylesheet" href="styles.css">
   <script src="script.js" defer></script>
 </head>
@@ -36,13 +36,13 @@
 
       <nav id="primary-nav" class="primary-nav" aria-label="Primary navigation">
         <a href="#services">Services</a>
-        <a href="#location">Locations</a>
-        <a href="https://www.woodiesautoservice.com/coupons">Specials</a>
+        <a class="nav-assessment" href="#assessment">Assess my car</a>
+        <a href="#location">Find a shop</a>
         <a href="#why-woodies">Why Woodie's</a>
       </nav>
 
       <div class="header-actions">
-        <a class="text-link" href="tel:+17048377487">Call a shop</a>
+        <a class="text-link text-link--location" href="#location">20+ Carolina locations</a>
         <a class="button button--small" href="https://www.woodiesautoservice.com/appointments">Schedule service</a>
       </div>
     </div>
@@ -56,9 +56,12 @@
           <p class="hero-lede">Since 1963, Woodie's has served Carolina drivers with ASE-certified expertise, straightforward communication, and a nationwide warranty.</p>
 
           <div class="hero-conversion">
-            <div class="hero-actions" aria-label="Service actions">
-              <a class="button" href="https://www.woodiesautoservice.com/appointments">Schedule service</a>
-              <a class="button button--outline" href="#location">Find my nearest shop</a>
+            <div class="hero-action-stack">
+              <div class="hero-actions" aria-label="Service actions">
+                <a class="button" href="https://www.woodiesautoservice.com/appointments">Schedule service</a>
+                <a class="button button--outline" href="#assessment">Start symptom check</a>
+              </div>
+              <p class="hero-assessment-note">Not sure what is wrong? About two minutes, no account required.</p>
             </div>
 
             <div class="cta-trust" aria-label="Trusted affiliations and warranty">
@@ -78,11 +81,11 @@
           </ul>
         </div>
 
-        <div class="hero-visual reveal" aria-label="Woodie's technician inspecting an engine">
-          <img src="assets/engine.webp" alt="Technician inspecting a vehicle engine" width="373" height="229">
+        <div class="hero-visual reveal" aria-label="A Woodie's customer getting clear answers from a mechanic">
+          <img src="assets/hero-customer-mechanic.webp" alt="A smiling customer talking with a mechanic in a bright service bay" width="1600" height="901">
           <div class="hero-visual__note">
-            <span>What happens next</span>
-            <strong>Pick a shop. Tell us what is going on. We will take it from there.</strong>
+            <span>Real people, clear answers</span>
+            <strong>Tell us what you notice. We will explain what comes next.</strong>
           </div>
         </div>
       </div>
@@ -92,23 +95,41 @@
       <div class="shell location-grid">
         <div class="location-intro">
           <h2 id="location-title">A real location, a real phone number, a clear next step.</h2>
-          <p>Choose an area to see one nearby Woodie's location. You can call the shop directly or continue to online scheduling.</p>
+          <p>We will estimate your nearest Woodie's from your internet connection. You can always choose a different shop.</p>
         </div>
 
         <div class="location-finder">
-          <label for="area-select">Your area</label>
+          <label for="area-select">Your nearest shop</label>
           <div class="select-row">
             <select id="area-select">
-              <option value="charlotte">Charlotte</option>
-              <option value="charleston">Charleston</option>
-              <option value="rock-hill">Rock Hill</option>
+              <option value="midtown">Midtown, Charlotte</option>
+              <option value="ballantyne">Ballantyne, Charlotte</option>
+              <option value="carmel-road">Carmel Road, Charlotte</option>
+              <option value="arrowood">Arrowood, Charlotte</option>
+              <option value="uptown">Uptown, Charlotte</option>
+              <option value="charlottetowne">Charlottetowne Avenue, Charlotte</option>
+              <option value="ashley-road">Ashley Road, Charlotte</option>
+              <option value="mallard-crossing">Mallard Crossing, Charlotte</option>
+              <option value="mint-hill">Mint Hill</option>
+              <option value="matthews">Matthews</option>
+              <option value="huntersville">Huntersville</option>
+              <option value="davidson">Davidson</option>
+              <option value="indian-land">Indian Land</option>
+              <option value="fort-mill">Fort Mill at Doby's Bridge</option>
+              <option value="celanese">Celanese, Rock Hill</option>
+              <option value="savannah-hwy">Savannah Highway, Charleston</option>
+              <option value="eagle">Eagle, Charleston</option>
+              <option value="east-cooper">East Cooper, Mount Pleasant</option>
+              <option value="summerville">Summerville</option>
+              <option value="downtown-summerville">Downtown Summerville</option>
             </select>
             <a class="all-locations" href="https://www.woodiesautoservice.com/locations">View all locations</a>
           </div>
+          <p id="location-status" class="location-status" data-state="pending" role="status">Finding the closest shop from your approximate area…</p>
 
           <article class="shop-result" aria-live="polite">
             <div>
-              <p class="shop-result__label">Nearby Woodie's</p>
+              <p class="shop-result__label">Closest Woodie's</p>
               <h3 id="shop-name">Midtown</h3>
               <p id="shop-address">915 South McDowell St., Charlotte, NC 28204</p>
               <p id="shop-hours">Monday–Friday, 7:00 AM–6:00 PM</p>
@@ -132,12 +153,12 @@
         </div>
 
         <div class="service-layout">
-          <a class="service-feature" href="https://www.woodiesautoservice.com/services/engine-diagnostics">
+          <a class="service-feature" href="#assessment">
             <img src="assets/engine.webp" alt="Technician diagnosing a vehicle engine" width="373" height="229">
             <div>
               <span>Something feels wrong</span>
-              <h3>Diagnose a problem</h3>
-              <p>Warning light, unusual noise, rough ride, or a problem you cannot name yet.</p>
+              <h3>Start a symptom check</h3>
+              <p>Warning light, unusual noise, rough ride, or a problem you cannot name yet. Get clear guidance before you schedule.</p>
             </div>
           </a>
 
@@ -158,6 +179,73 @@
             </a>
           </div>
         </div>
+      </div>
+    </section>
+
+    <section id="assessment" class="assessment-section" aria-labelledby="assessment-title">
+      <div class="shell assessment-grid">
+        <div class="assessment-intro reveal">
+          <p class="assessment-kicker">AI-guided symptom check</p>
+          <h2 id="assessment-title">Not sure what is wrong? Start with what you notice.</h2>
+          <p>Answer two quick questions. We will organize the symptoms, flag anything urgent, and help you schedule the right next step.</p>
+          <ul class="assessment-benefits" aria-label="Assessment details">
+            <li>About two minutes</li>
+            <li>No account required</li>
+            <li>Your shop confirms the diagnosis</li>
+          </ul>
+        </div>
+
+        <form id="vehicle-assessment" class="assessment-panel reveal" novalidate>
+          <div class="assessment-progress" aria-live="polite">
+            <span id="assessment-progress-label">Question 1 of 2</span>
+            <progress id="assessment-progress" max="2" value="1">1 of 2</progress>
+          </div>
+
+          <fieldset class="assessment-step" data-step="1">
+            <legend>What are you noticing?</legend>
+            <div class="assessment-options">
+              <label><input type="radio" name="symptom" value="warning"><span>Warning light</span></label>
+              <label><input type="radio" name="symptom" value="noise"><span>New noise or vibration</span></label>
+              <label><input type="radio" name="symptom" value="handling"><span>Braking or steering feels different</span></label>
+              <label><input type="radio" name="symptom" value="power"><span>Trouble starting or loss of power</span></label>
+              <label><input type="radio" name="symptom" value="heat"><span>Heat, smell, smoke, or a leak</span></label>
+            </div>
+          </fieldset>
+
+          <fieldset class="assessment-step" data-step="2" hidden>
+            <legend>How is it affecting the drive?</legend>
+            <div class="assessment-options assessment-options--compact">
+              <label><input type="radio" name="urgency" value="normal"><span>It still drives normally</span></label>
+              <label><input type="radio" name="urgency" value="worse"><span>It is getting worse</span></label>
+              <label><input type="radio" name="urgency" value="unsafe"><span>I do not feel safe driving</span></label>
+            </div>
+            <p id="assessment-error" class="assessment-error" role="alert" hidden>Choose the option that best matches the drive.</p>
+
+            <label class="assessment-notes" for="assessment-notes">
+              Anything else the technician should know? <span>Optional</span>
+              <textarea id="assessment-notes" rows="3" maxlength="280" placeholder="For example: it happens when braking above 40 mph"></textarea>
+            </label>
+
+            <div class="assessment-controls">
+              <button id="assessment-back" class="button button--outline" type="button">Back</button>
+              <button class="button" type="submit">See my guidance</button>
+            </div>
+          </fieldset>
+
+          <div id="assessment-result" class="assessment-result" aria-live="polite" hidden>
+            <p class="assessment-result__label">Your service intake summary</p>
+            <h3 id="assessment-result-title"></h3>
+            <p id="assessment-result-guidance"></p>
+            <p class="assessment-result__subhead">A technician may check:</p>
+            <ul id="assessment-result-causes"></ul>
+            <div class="assessment-result__actions">
+              <a class="button" href="https://www.woodiesautoservice.com/appointments">Schedule this concern</a>
+              <a id="assessment-call" class="button button--outline" href="tel:+17048377487">Call the nearest shop</a>
+              <button id="assessment-restart" class="assessment-restart" type="button">Start over</button>
+            </div>
+            <p class="assessment-disclaimer">This guidance is based on common symptom patterns and is not a diagnosis. If the vehicle feels unsafe, pull over safely and call for assistance.</p>
+          </div>
+        </form>
       </div>
     </section>
 
